@@ -13,7 +13,7 @@ namespace BlazorWithMongo.Server.Controllers
     [Route("api/[controller]")]
     public class EmployeeController : Controller
     {
-        private EmployeeDataAccessLayer EmployeeDAL { get; set; } = new EmployeeDataAccessLayer();
+        private EmployeeDataAccessLayer EmployeeDAL { get; } = new EmployeeDataAccessLayer();
 
         // GET api/Employee/Index
         [HttpGet]
@@ -23,31 +23,41 @@ namespace BlazorWithMongo.Server.Controllers
             return EmployeeDAL.GetAllEmployees();
         }
 
-        /*
-        // GET api/<controller>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]string value)
+        [Route("api/Employee/Create")]
+        public void Create([FromBody] Employee emp)
         {
+            EmployeeDAL.AddEmployee(emp);
+
         }
 
-        // PUT api/<controller>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        [HttpGet]
+        [Route("api/Employee/Details/{id}")]
+        public Employee Details(string id)
         {
+            return EmployeeDAL.GetEmployeeData(id);
         }
 
-        // DELETE api/<controller>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpPut]
+        [Route("api/Employee/Edit")]
+        public void Edit([FromBody] Employee emp)
         {
+            EmployeeDAL.updateEmployee(emp);
         }
-        */
+
+        [HttpDelete]
+        [Route("api/Employee/Delete/{id}")]
+        public void Delete(string id)
+        {
+            EmployeeDAL.DeleteEmployee(id);
+        }
+
+        [HttpGet]
+        [Route("api/Employee/Cities")]
+        public List<City> Cities()
+        {
+            return EmployeeDAL.GetAllCities();
+        }
+
     }
 }
