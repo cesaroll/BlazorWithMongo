@@ -11,7 +11,7 @@ namespace BlazorWithMongo.Shared.Models
 
         public EmployeeDbContext()
         {
-            string connString = "mongodb+srv://cesarl:STart12@clusterces-s5jn4.mongodb.net/test?retryWrites=true"; //Should allways be inyected and resides in other place
+            string connString = "mongodb://cesarl:STart123@clusterces-s5jn4.mongodb.net"; //Should be injected instead
             var client = new MongoClient(connString);
             _mongoDatabase = client.GetDatabase("EmployeeDB");
         }

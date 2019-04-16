@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWithMongo.Server", "BlazorWithMongo.Server\BlazorWithMongo.Server.csproj", "{0901B178-96FA-43A1-93CF-5E8035EAD127}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWithMongo.Server", "BlazorWithMongo.Server\BlazorWithMongo.Server.csproj", "{0901B178-96FA-43A1-93CF-5E8035EAD127}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWithMongo.Client", "BlazorWithMongo.Client\BlazorWithMongo.Client.csproj", "{DB6EFAEE-CF71-44E4-ADF7-A4957011223D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWithMongo.Client", "BlazorWithMongo.Client\BlazorWithMongo.Client.csproj", "{DB6EFAEE-CF71-44E4-ADF7-A4957011223D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWithMongo.Shared", "BlazorWithMongo.Shared\BlazorWithMongo.Shared.csproj", "{A74A7ADF-8438-4E14-B12A-E134408CAEFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWithMongo.Shared", "BlazorWithMongo.Shared\BlazorWithMongo.Shared.csproj", "{A74A7ADF-8438-4E14-B12A-E134408CAEFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
